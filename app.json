@@ -1,0 +1,13 @@
+{
+    "name": "mtaguchi-line-bot-beacon",
+    "description": "bot and beacon for LINE",
+    "repository": "https://github.com/patapata23/php-bot.git",
+    "logo": "",
+    "keywords": ["bot", "beacon", "LINE"],
+    "addons": ["fixie:tricycle"],
+    "env": {
+       "LINE_CHANNEL_ID": {
+            "description": "LINE Channel ID"
+        }
+    }
+}
