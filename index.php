@@ -22,13 +22,49 @@ function api_post_request($token, $message, $type) {
           );
        if ($type == 'beacon') {
            $post = array(
-                 'replyToken' => $token,
+                   'replyToken' => $token,
                  'messages' => array(
                               array(
-                                'type' => 'video',
-                                 'originalContentUrl' => 'https://example.com/original.mp4',
-                                     "previewImageUrl" => "https://example.com/preview.jpg"
-                              )
+                               "type" => "template",
+                               "altText" =>  "this is a carousel template",
+                               "template" => array(
+                                      "type" => "carousel",
+                                      "columns" => array(
+                                        array(
+                                         "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+                                         "title": "this is menu",
+                                         "text": "description",
+                                         "actions" => array(
+                                                 array(
+                                                    "type"  => "postback",
+                                                    "label" => "Buy",
+                                                    "data" => "action=buy&itemid=111"
+                                                 ),
+                                                 array(
+                                                    "type"  => "postback",
+                                                    "label" => "Add to cart",
+                                                    "data" => "action=add&itemid=111"
+                                                 )
+                                         )
+                                      ), 
+                                      array(
+                                         "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+                                         "title": "this is menu",
+                                         "text": "description",
+                                         "actions" => array(
+                                                 array(
+                                                    "type"  => "postback",
+                                                    "label" => "Buy",
+                                                    "data" => "action=buy&itemid=111"
+                                                 ),
+                                                 array(
+                                                    "type"  => "postback",
+                                                    "label" => "Add to cart",
+                                                    "data" => "action=add&itemid=111"
+                                                 )
+                                         )
+                                    )
+                           )
                     )
                 );
        } else {
