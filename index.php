@@ -64,9 +64,10 @@ function api_post_request($token, $message, $type) {
                                                  )
                                          )
                                     )
-                           )
-                    )
-                );
+                                )
+                   )
+              )
+           );
        } else {
            $post = array(
                  'replyToken' => $token,
