@@ -20,10 +20,14 @@ function api_post_request($token, $message, $type) {
                   'Content-Type: application/json',
                   "Authorization: Bearer {$channel_access_token}"
           );
-       if ($type == 'beacon') {
+       if ($type == 'message') {
            $post = array(
                    'replyToken' => $token,
                    'messages' => array(
+                              array(
+                                'type' => 'text',
+                                'text' => $message
+                         ),
                               array(
                                "type" => "template",
                                "altText" =>  "this is a carousel template",
