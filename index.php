@@ -23,7 +23,7 @@ function api_post_request($token, $message, $type) {
        if ($type == 'beacon') {
            $post = array(
                    'replyToken' => $token,
-                 'messages' => array(
+                   'messages' => array(
                               array(
                                "type" => "template",
                                "altText" =>  "this is a carousel template",
@@ -64,8 +64,9 @@ function api_post_request($token, $message, $type) {
                                                  )
                                          )
                                     )
-                                )
-                   )
+                              )
+                       )
+                  )
               )
            );
        } else {
