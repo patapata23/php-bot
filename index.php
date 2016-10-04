@@ -15,7 +15,7 @@ foreach ($json_object->events as $event) {
 
 function api_post_request($token, $message) {
        $url = 'https://api.line.me/v2/bot/message/reply';
-       $channel_access_token = 'xczs26iQ6lF6mcyuTIMFVevsTfho/qTI1eEfKNJlV32/VkjpuYHmJZ5lVEaPulYBOr35vrDUyU4sQzK8ZXOj7fhX2w9gPZ/FaTDPxrY7VUFxLPQDPqKKzo+V3xwvGGr58P9ZEnCRktyGi89xSQJQhwdB04t89/1O/w1cDnyilFU=';
+       $channel_access_token = 'ltj/YgPzQIGcUjDDGWOC2bTP8WjZCBD0S/COyVi6knuMwJJb8xNdTwrc61XILB8VOr35vrDUyU4sQzK8ZXOj7fhX2w9gPZ/FaTDPxrY7VUHuqrDc9+cmgFWRVrojc0KR+lydSt97n/u0oRVSq5kvcQdB04t89/1O/w1cDnyilFU=';
        $headers = array(
                   'Content-Type: application/json',
                   "Authorization: Bearer {$channel_access_token}"
@@ -26,9 +26,10 @@ function api_post_request($token, $message) {
                               array(
                                 'type' => 'text',
                                 'text' => $message
-                              )
-                             )
+                         )
+                 )
        );
+
 
        $curl = curl_init($url);
        curl_setopt($curl, CURLOPT_POST, true);
