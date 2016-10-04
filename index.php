@@ -31,9 +31,9 @@ function api_post_request($token, $message, $type) {
                                       "type" => "carousel",
                                       "columns" => array(
                                         array(
-                                         "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
-                                         "title": "this is menu",
-                                         "text": "description",
+                                         "thumbnailImageUrl" => "https://example.com/bot/images/item1.jpg",
+                                         "title" => "this is menu",
+                                         "text" => "description",
                                          "actions" => array(
                                                  array(
                                                     "type"  => "postback",
@@ -48,9 +48,9 @@ function api_post_request($token, $message, $type) {
                                          )
                                       ), 
                                       array(
-                                         "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
-                                         "title": "this is menu",
-                                         "text": "description",
+                                         "thumbnailImageUrl" => "https://example.com/bot/images/item1.jpg",
+                                         "title" => "this is menu",
+                                         "text" => "description",
                                          "actions" => array(
                                                  array(
                                                     "type"  => "postback",
